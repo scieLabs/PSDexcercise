@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-image: url(./src/headerBG.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: local;
+    color: white;
+    background-size: cover;
+}
+
+nav {
+    text-align: right;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.1rem;
+    padding-left: 0.5rem;
+    text-transform: uppercase;
+    font-size: small;
+    padding-right: 0.5rem;
+}
+
+header h1 {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+header p {
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-right: 2rem;
+    text-shadow: 4px 4px 4px 4px black;
+}
+
+button {
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    letter-spacing: 0.1rem;
+    margin-top: 2rem;
+    padding: 0.5rem 2rem;
+}
+
+.button-red {
+    background-color: rgb(209, 33, 33);
+    color: white;
+    padding: 0.5rem 2rem;
+}
+
+#header-button {
+    display: inline;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    position: relative;
+    margin-left: 60%;
+    margin-right: 5%;
+    padding: 0.8rem 3rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+#flex-founders {
+    color: rgb(209, 33, 33);
+    font-size: small;
+}
+
+#founders img {
+    border-radius: 50%;
+    width: 100px;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+
+#chefs {
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+}
+
+#bestburger img, #bigburger img {
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.red-text h2, .red-text p, .red-text h5 {
+    color: rgb(209, 33, 33);
+}
+
+#bestburger, #bigburger {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#bestburger {
+    background-color:  rgb(209, 33, 33);
+    color: white;
+}
+
+#bigburger h2 {
+    color: rgb(209, 33, 33);
+}
+
+.button-white {
+    color: rgb(209, 33, 33);
+}
+
+.button-red-small {
+    font-size: medium;
+    letter-spacing: normal;
+    background-color: rgb(209, 33, 33);
+    color: white;
+    font-weight: normal;
+    margin-top: 1rem;
+}
+
+#flex-menu img {
+    width: 80px;
+}
+
+#quote {
+    background-image: url(./src/quoteBG.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: local;
+    background-size: cover;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    text-align: center;
+}
+
+#quote div q {
+    color: white;
+    text-shadow: 4px 4px 4px 4px black;
+
+}
+
+#quote div p {
+    color: white;
+    padding-top: 1rem;
+}
+
+#quote div {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(255,0,0,0));
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#subscribe {
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+#bestburger p, #bigburger p, #subscribe p {
+    padding-top: 1rem;
+}
+
+input {
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+footer {
+    background-color: rgb(36, 34, 34);
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+footer p {
+    font-size: small;
+    max-width: 50ch;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-size: small;
+}
+
+nav a:hover, footer a:hover {
+    color: rgb(209, 33, 33);
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgb(153, 65, 65);
+}
+
+#flex-footer {
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+
+}
+
+/* please stop wrapping the way you do :( */
+
+.flex-container #footer-title {
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+
+
+@media only screen and (max-width: 360px) {
+    header a {
+        display: block;
+        padding-right: 1rem;
+    }
+    #header-button {
+        background-color: rgb(209, 33, 33);
+        color: white;
+        padding: 0.5rem 2rem;
+    }
+    #subscribe-button {
+        width: 90%;
+    }
+    #bestburger, #bigburger {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+}
+
+

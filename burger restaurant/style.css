@@ -103,10 +103,11 @@ figcaption h5 {
     position: relative;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: center;
     height: 400px;
     align-items: center;
     align-content: center;
+    gap: 5rem;
 }
 
 .button2 {
