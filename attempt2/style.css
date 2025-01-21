@@ -12,6 +12,11 @@ header {
     background-attachment: local;
     color: white;
     background-size: cover;
+    text-shadow: 4px 4px 4px 4px rgb(0, 0, 0);
+
+    /* to try and set the height with bad math
+    height: calc(2.22 * 100vw);
+    */
 }
 
 nav {
@@ -38,7 +43,6 @@ header p {
     padding-left: 2rem;
     padding-top: 1rem;
     padding-right: 2rem;
-    text-shadow: 4px 4px 4px 4px black;
 }
 
 button {
