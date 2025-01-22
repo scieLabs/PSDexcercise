@@ -1,0 +1,103 @@
+* {padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: fantasy, sans-serif;
+}
+
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: wrap;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+
+
+
+/* reset end */
+
+header {
+    background-image: linear-gradient(rgba(63, 25, 68, 0.5), rgba(0,0,0,0));
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    border-bottom-color: blueviolet;
+    border-bottom-style: double;
+}
+
+#hero-grid {
+    display: grid;
+    grid-auto-flow: dense; /* idk what this does */
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 25% 25% 25% 25%;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    width: 100%;
+}
+
+#navigation {
+    grid-column-start: 3;
+    grid-row-start: 1;
+/*this is not doing anything - now it's doing Something*/
+/*sometimes the mystery is in targeting. always use IDs bitch! */
+}
+
+#navigation a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding-left: 1em;
+    color: #742031;
+    text-shadow: 5px 5px 5px #fc466b;
+    text-transform: uppercase;
+}
+
+#hero-headline {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+#hero-logo {
+    grid-column-start: 3;
+    grid-row-start: 2;
+} 
+
+#hero-logo img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+#hero-tagline {
+    grid-column-start: 3;
+    grid-row-start: 5;
+
+}
+
+#instakill {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    margin-left: 4rem;
+    padding: 2rem 4rem;
+    font-size: larger;
+    text-transform: uppercase;
+    border-radius: 60px;
+    border-style: ridge;
+    border-color: #fc466b;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+
+}
+
+#instakill a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+}
+
+/* ------- header end ------- */
