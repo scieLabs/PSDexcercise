@@ -20,7 +20,7 @@
 
 
 
-/* reset end */
+/* -------------- reset end------------------- */
 
 header {
     background-image: linear-gradient(rgba(63, 25, 68, 0.5), rgba(0,0,0,0));
@@ -35,17 +35,20 @@ header {
 #hero-grid {
     display: grid;
     grid-auto-flow: dense; /* idk what this does */
-    grid-template-columns: 40% 20% 40%;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 25% 25% 25% 25%;
-    column-gap: 1rem;
-    row-gap: 1rem;
+  /*  column-gap: 1rem; */
+    row-gap: 1rem; 
     width: 100%;
+ /*   justify-items: right;  "stretch" to cover the whole area */
+    /* align-items: center; ---- vertical alignment ---- */
 }
 
 #navigation {
-    grid-column-start: 3;
+    grid-column-start: 4;
     grid-row-start: 1;
-/*this is not doing anything - now it's doing Something*/
+    justify-self: right; /* an individualized of justify-itens */
+
 /*sometimes the mystery is in targeting. always use IDs bitch! */
 }
 
@@ -60,12 +63,18 @@ header {
 
 #hero-headline {
     grid-column-start: 1;
-    grid-row-start: 2;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    justify-self: center;
+    font-size: x-large;
 }
 
 #hero-logo {
-    grid-column-start: 3;
+    grid-column-start: 2;
+    grid-column-end: 4;
     grid-row-start: 2;
+    justify-self: center;
+    align-self: center;
 } 
 
 #hero-logo img {
@@ -75,14 +84,23 @@ header {
 
 #hero-tagline {
     grid-column-start: 3;
-    grid-row-start: 5;
+    grid-column-end: span 2;
+    grid-row-start: 3;
+    justify-self: center;
+    font-size: xx-large;
 
 }
 
 #instakill {
-    grid-column-start: 1;
+    grid-column-start: 2;
+    grid-column-end: 3;
     grid-row-start: 3;
-    margin-left: 4rem;
+    justify-self: left;
+    align-self: center;
+
+}
+
+#button-instakill {
     padding: 2rem 4rem;
     font-size: larger;
     text-transform: uppercase;
@@ -91,7 +109,7 @@ header {
     border-color: #fc466b;
     background: rgb(63,94,251);
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-
+    box-shadow: 5px 5px 5px #fc466b;
 }
 
 #instakill a {
@@ -101,3 +119,23 @@ header {
 }
 
 /* ------- header end ------- */
+
+#main-grid {
+    display: grid;
+    grid-template: 20% 20% 20% 20% 20% / 20% 20% 20% 20% 20%;
+
+}
+
+
+/* ----------- media; make for smaller screens -------------- 
+
+@media (min-width: 1080px) { /* actually works! */
+  /*  #hero-grid {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+    #navigation {
+        grid-column-start: 4;
+    }
+    
+}
+*/
