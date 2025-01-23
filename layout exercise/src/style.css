@@ -242,7 +242,7 @@ main {
     padding-left: 20%;
     padding-right: 20%;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 1fr 4fr 1fr; /* idk whats happening! */
+    grid-template-rows: repeat(3); /* idk whats happening! */
 }
 
 #grid2-item1 {
@@ -259,31 +259,32 @@ main {
     background-color: #fc466b;
     grid-column-start: 2;
     grid-row-start: 2;
-    justify-content: center;
+
 }
 
 #grid2-item2 img {
     background-color: aliceblue;
     width: 400px;
-    max-width: 100%;
+    height: auto;
     z-index: 1;
 }
 
 #grid2-item3 {
     background-color: aqua;
     grid-column-start: 3;
-    grid-row-start: 4;
+    grid-row-start: 3;
 }
 
 #grid2-item4 {
-    background-color: aquamarine;
+ /*   background-color: aquamarine; */
     grid-column-start: 2;
     grid-row-start: 2;
 }
 
-#grid2-item4 img {
+#grid2-item4 figure {
     max-width: 100%;
     width: 200px;
+    height: auto;
     z-index: 2;
 }
 
