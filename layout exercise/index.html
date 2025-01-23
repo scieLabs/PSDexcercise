@@ -7,8 +7,8 @@
         <title>Layout Playground</title>
     </head>
 
-    <body>
-        <header>
+    <body class="grid-container" id="body-grid">
+        <header class="grid-child" id="header">
             <hero>
                 <div class="grid-container" id="hero-grid">
                     <nav id="navigation">
@@ -38,7 +38,7 @@
             </hero>
         </header>
 
-        <main>
+        <main class="grid-child" id="main">
             <section class="section" id="section-grid">
                 <div class="grid-container" id="main-grid">
                     <div id="grid-item1">
@@ -94,7 +94,7 @@
 
         </main>
 
-        <aside>
+        <aside class="grid-child" id="aside">
             <div id="float"> <!-- see how it works first, then maybe flex it-->
                 <p>this is gonna be floated background. delete text later?</p>
             </div>
@@ -116,7 +116,7 @@
             </div>
         </aside>
 
-        <footer>
+        <footer class="grid-child" id="footer">
             <div class="grid-container" id="footer-grid"> <!--just put them into a billion rows-->
                 <div id="letter1">
                     <p>O</p>

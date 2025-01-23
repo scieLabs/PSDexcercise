@@ -22,6 +22,30 @@
 
 /* -------------- reset end------------------- */
 
+/* ---- maybe something to try later ----
+#body-grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(5, 1fr);
+    grid-auto-rows: max-content;
+    grid-template-areas: "header", "aside";
+
+
+}
+
+#header {
+    grid-area: header;
+    grid-column-start: 1;
+}
+
+#aside {
+    grid-area: aside;
+}
+
+*/
+
 header {
     background-image: linear-gradient(rgba(63, 25, 68, 0.5), rgba(0,0,0,0));
     padding-top: 2rem;
@@ -67,6 +91,7 @@ header {
     grid-row-start: 1;
     justify-self: center;
     font-size: x-large;
+    letter-spacing: 2px;
 }
 
 #hero-logo {
@@ -80,6 +105,7 @@ header {
 #hero-logo img {
     width: 100px;
     border-radius: 50%;
+    box-shadow: 2px 5px 5px #fc466b;
 }
 
 #hero-tagline {
@@ -88,6 +114,7 @@ header {
     grid-row-start: 3;
     justify-self: center;
     font-size: xx-large;
+    letter-spacing: 2px;
 
 }
 
@@ -97,7 +124,7 @@ header {
     grid-row-start: 3;
     justify-self: left;
     align-self: center;
-
+/* figure out how to move this goddamn thing properly later */
 }
 
 #button-instakill {
@@ -120,10 +147,45 @@ header {
 
 /* ------- header end ------- */
 
+main {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+
 #main-grid {
     display: grid;
-    grid-template: 20% 20% 20% 20% 20% / 20% 20% 20% 20% 20%;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: fit-content;
+    grid-template-areas: "item1 item1 item1 item1 item1" "item2 item5" "item3" "item4";
 
+}
+
+#grid-item1 {
+    background-color: #742031;
+    grid-area: item1;
+}
+
+#grid-item2 {
+    background-color: #fc466b;
+    grid-area: item2;
+}
+
+#grid-item3 {
+    background-color: aqua;
+    grid-area: item3;
+}
+
+#grid-item4 {
+    background-color: aquamarine;
+    grid-area: item4;
+}
+
+#grid-item5 {
+    background-color: beige;
+    grid-area: item5;
 }
 
 
