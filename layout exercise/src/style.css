@@ -242,7 +242,7 @@ main {
     padding-left: 20%;
     padding-right: 20%;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 10% 50% 10%; /* idk whats happening! */
+    grid-template-rows: 1fr 4fr 1fr; /* idk whats happening! */
 }
 
 #grid2-item1 {
@@ -250,6 +250,9 @@ main {
     grid-column-start: 1;
     grid-column-end: span 4;
     grid-row-start: 1;
+    color: #fc466b;
+    justify-items: center;
+    align-content: center;
 }
 
 #grid2-item2 {
@@ -263,13 +266,13 @@ main {
     background-color: aliceblue;
     width: 400px;
     max-width: 100%;
-    z-index: 2;
+    z-index: 1;
 }
 
 #grid2-item3 {
     background-color: aqua;
-    grid-column-start: 4;
-    grid-row-start: 3;
+    grid-column-start: 3;
+    grid-row-start: 4;
 }
 
 #grid2-item4 {
@@ -281,10 +284,33 @@ main {
 #grid2-item4 img {
     max-width: 100%;
     width: 200px;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* ---------- the end to horrible section2 */
+
+footer {
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(63, 25, 68, 0.5));
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+#footer-flex {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    color: #742031;
+}
+#letter2, #letter4, #letter6, #letter8 {
+    align-self: center;
+    color: #cc3250;
+}
+
+#letter3, #letter7 {
+    align-self: flex-end;
+    color: #fc466b;
+}
+
 
 
 
