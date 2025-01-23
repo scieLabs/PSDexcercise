@@ -18,6 +18,12 @@
     text-wrap: balance;
   }
 
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
 
 
 /* -------------- reset end------------------- */
@@ -157,36 +163,82 @@ main {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    height: fit-content;
-    grid-template-areas: "item1 item1 item1 item1 item1" "item2 item5" "item3" "item4";
+    grid-template-rows: 1fr 5fr 1fr;
+    margin-bottom: 4rem;
 
 }
 
 #grid-item1 {
     background-color: #742031;
-    grid-area: item1;
+    grid-column-start: 2;
+    grid-column-end: span 3;
+    align-content: center;
+}
+
+#grid-item1 h2 {
+    justify-self: center;
+    align-self: center; /* doesnt work! */
+    word-spacing: 0.4em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: white;
 }
 
 #grid-item2 {
     background-color: #fc466b;
-    grid-area: item2;
+    grid-column-start: 2;
+    grid-row-start: span 2;
+    justify-items: center;
+    align-content: center; /* instead of align-self */
+    line-height: 2;
+}
+
+#grid-item2 ul {
+    align-self: center; /* doesnt work. wtf */
+    list-style-type:disc;
+    line-break: strict; /* does it do anything? */
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: justify; /*to block text */
+}
+
+#grid-item2 ul li {
+    max-width: 40ch;
+    text-justify:inter-cluster; /* what does this do? */
+    font-weight:lighter; /* doesnt work */
 }
 
 #grid-item3 {
     background-color: aqua;
-    grid-area: item3;
+    grid-column-start: 4;
+    grid-row-start: 2;
+    align-content: center;
+    line-height: 5;
+ /*   font-family: cursive; --- apparently I cant change fonts here */
+    font-variant: small-caps;
+}
+
+#grid-item3 p {
+    justify-self: center;
+
 }
 
 #grid-item4 {
     background-color: aquamarine;
-    grid-area: item4;
+    grid-column-start: 3;
+    grid-column-end: span 2;
+    padding-top: 1rem;
+    padding-left: 1rem;
 }
 
 #grid-item5 {
-    background-color: beige;
-    grid-area: item5;
+    grid-column-start: 3;
+    grid-row-start: 2;
 }
+
+/* ----------------- this finally concludes section1 ---------------- */
+
 
 
 /* ----------- media; make for smaller screens -------------- 
